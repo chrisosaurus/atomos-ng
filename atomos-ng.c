@@ -5,11 +5,6 @@
 #define DEBUG 0
 #define N_GAS 2
 
-enum gas_type {
-    gas_O,
-    gas_H
-};
-
 struct cell {
     /* a count of the number of each
      * gas in this cell
