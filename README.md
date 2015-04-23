@@ -43,3 +43,6 @@ which gives us
     169 seconds / 1000 ticks = 0.169 second per tick
 
 
+Please note here that 1 tick does not map to 1 frame,
+in fact we would require `many` ticks per frame
+
