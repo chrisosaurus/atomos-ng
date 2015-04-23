@@ -34,6 +34,8 @@ void init( struct cell *cells, unsigned int xd, unsigned int yd, unsigned int zd
 
     unsigned long int quan_tot = 0;
 
+    unsigned int bounds = xd * yd * zd;
+
     /* initial volume */
 
     /* iterate through each pair of cells and swap */
@@ -42,7 +44,7 @@ void init( struct cell *cells, unsigned int xd, unsigned int yd, unsigned int zd
             for( z=0 ; z < zd ; ++ z ){
 
                 i = x + (y*xd) + (z*xd*yd);
-                assert( i < (xd * yd * zd) );
+                assert( i < bounds );
 
                 c = &(cells[i]);
                 assert(c);
