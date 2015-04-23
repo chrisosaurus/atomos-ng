@@ -38,11 +38,17 @@ between neighbouring cells
     cleaning objects and temporary files
     cleaning executables
 
-which gives us
+
+Which gives us
 
     169 seconds / 1000 ticks = 0.169 second per tick
 
 
 Please note here that 1 tick does not map to 1 frame,
 in fact we would require `many` ticks per frame
+
+
+Current VSZ (captures using a simple ps) for 402 million particles in 128 ^ 3 volume is
+
+    20404 KiB = 19.9 MiB
 
