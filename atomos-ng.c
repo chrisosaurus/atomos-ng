@@ -204,4 +204,6 @@ int main(void){
     puts("");
 
     free(cells);
+
+    return 0;
 }
