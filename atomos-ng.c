@@ -19,8 +19,8 @@ struct cell {
 
 void init( struct cell *cells, unsigned int xd, unsigned int yd, unsigned int zd ){
     unsigned int x=0,
-        y=0,
-        z=0;
+                 y=0,
+                 z=0;
 
     unsigned int quan = 0;
     unsigned int gas = 0;
@@ -29,8 +29,8 @@ void init( struct cell *cells, unsigned int xd, unsigned int yd, unsigned int zd
     unsigned int i = 0;
 
     unsigned int xm = xd / 2,
-        ym = yd / 2,
-        zm = zd / 2;
+                 ym = yd / 2,
+                 zm = zd / 2;
 
     unsigned long int quan_tot = 0;
 
@@ -66,12 +66,8 @@ void init( struct cell *cells, unsigned int xd, unsigned int yd, unsigned int zd
 
 void tick( struct cell *cells, unsigned int xd, unsigned int yd, unsigned int zd ){
     unsigned int x=0,
-        y=0,
-        z=0;
-
-    unsigned int nx=0,
-        ny=0,
-        nz=0;
+                 y=0,
+                 z=0;
 
     struct cell *c_a = 0;
     struct cell *c_b = 0;
@@ -101,12 +97,8 @@ void tick( struct cell *cells, unsigned int xd, unsigned int yd, unsigned int zd
 
 
                 /* swap with positive x neighbour */
-                nx = x + 1;
-                ni = nx + (ny*xd) + (nz*xd*yd);
-                if( nx < xd && ni < bounds ){
-                    ni = nx + (ny*xd) + (nz*xd*yd);
-                    assert( ni < (xd * yd * zd) );
-
+                ni = i + 1;
+                if( ni < bounds ){
                     c_b = &(cells[ni]);
                     assert(c_b);
 
@@ -130,10 +122,8 @@ void tick( struct cell *cells, unsigned int xd, unsigned int yd, unsigned int zd
                 }
 
                 /* swap with positive y neighbour */
-                ny = y + 1;
-                ni = nx + (ny*xd) + (nz*xd*yd);
-                if( ny < yd && ni < bounds ){
-
+                ni = i + xd;
+                if( ni < bounds ){
                     c_b = &(cells[ni]);
                     assert(c_b);
 
@@ -157,12 +147,8 @@ void tick( struct cell *cells, unsigned int xd, unsigned int yd, unsigned int zd
                 }
 
                 /* swap with positive z neighbour */
-                nz = z + 1;
-                ni = nx + (ny*xd) + (nz*xd*yd);
-                if( nz < zd && ni < bounds ){
-                    ni = nx + (ny*xd) + (nz*xd*yd);
-                    assert( ni < (xd * yd * zd) );
-
+                ni = i + (yd * xd);
+                if( ni < bounds ){
                     c_b = &(cells[ni]);
                     assert(c_b);
 

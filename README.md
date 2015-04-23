@@ -32,14 +32,14 @@ between neighbouring cells
 
     ticking
 
-    total wall clock time: 192.67 (s)
+    total wall clock time: 168.51 (s)
 
     make -s clean
     cleaning objects and temporary files
     cleaning executables
 
-
 which gives us
 
-    193 seconds / 1000 ticks = 0.193 second per tick
+    169 seconds / 1000 ticks = 0.169 second per tick
+
 
