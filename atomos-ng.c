@@ -44,13 +44,18 @@ void init( struct cell *cells, unsigned int xd, unsigned int yd, unsigned int zd
                 c = &(cells[i]);
                 assert(c);
 
-                for( gas=0; gas < N_GAS; ++gas ){
-                    /* initial quantity is based on proximity to center of room
-                     * currently no scaling
-                     */
-                    quan = abs( xm - x) + abs( ym - y ) + abs( zm - z );
-                    quan_tot += quan;
-                    c->gas_counts[gas] = quan;
+                if( x >= 25 &&
+                    x <= 50 &&
+                    y >= 25 &&
+                    y <= 50 ){
+                    for( gas=0; gas < N_GAS; ++gas ){
+                        /* initial quantity is based on proximity to center of room
+                         * currently no scaling
+                         */
+                        quan = 2;
+                        quan_tot += quan;
+                        c->gas_counts[gas] = quan;
+                    }
                 }
 
             }
@@ -176,9 +181,9 @@ void tick( struct cell *cells, unsigned int xd, unsigned int yd, unsigned int zd
 }
 
 int main(void){
-    unsigned int xd = 128;
-    unsigned int yd = 128;
-    unsigned int zd = 128;
+    unsigned int xd = 100;
+    unsigned int yd = 100;
+    unsigned int zd = 1;
 
     unsigned int i = 0;
     unsigned int nticks = 1000;
