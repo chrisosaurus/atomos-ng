@@ -8,7 +8,7 @@ atomos - no graph
 atomos-ng is a simple, non-graph based, reimplementation of
 some of the ideas behind https://github.com/DomNomNom/atomos
 
-if you want a useable implementation of atomos then see
+if you want to use an implementation of atomos then see
 https://github.com/DomNomNom/atomos_gpu
 
 
