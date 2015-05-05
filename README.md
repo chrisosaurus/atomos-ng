@@ -8,6 +8,10 @@ atomos - no graph
 atomos-ng is a simple, non-graph based, reimplementation of
 some of the ideas behind https://github.com/DomNomNom/atomos
 
+if you want a useable implementation of atomos then see
+https://github.com/DomNomNom/atomos_gpu
+
+
 The purpose of atomos-ng is to provide some quick and simple profiling metrics
 for the rough ideas behing atomos if we
 ignore the existing implementation
